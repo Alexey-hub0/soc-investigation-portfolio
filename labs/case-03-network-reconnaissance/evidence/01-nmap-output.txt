@@ -1,0 +1,9 @@
+# Nmap 7.99 scan initiated Wed Oct 14 18:28:05 2026 as: /usr/lib/nmap/nmap -sS -Pn -n -p 1-1000 --max-rate 50 --max-retries 0 --reason -oN /home/kali/case03-nmap-1000.txt 192.168.77.20
+Warning: 192.168.77.20 giving up on port because retransmission cap hit (0).
+Nmap scan report for 192.168.77.20
+Host is up, received arp-response (0.0013s latency).
+All 1000 scanned ports on 192.168.77.20 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 08:00:27:01:07:9C (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Oct 14 18:28:25 2026 -- 1 IP address (1 host up) scanned in 20.23 seconds

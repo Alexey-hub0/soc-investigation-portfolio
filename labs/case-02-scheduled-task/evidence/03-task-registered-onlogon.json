@@ -1,0 +1,91 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.14",
+  "_id": "OQghOqEBDawt5Bznbqkt",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "WIN11-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-srv"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "taskName": "\\\\T1053_005_OnLogon",
+          "userContext": "DESKTOP-IBOCO3P\\\\soc"
+        },
+        "system": {
+          "eventID": "106",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{de7b24ea-73c8-4a09-985d-5bdadcfa9017}",
+          "level": "4",
+          "channel": "Microsoft-Windows-TaskScheduler/Operational",
+          "opcode": "0",
+          "message": "\"User \"DESKTOP-IBOCO3P\\soc\"  registered Task Scheduler task \"\\T1053_005_OnLogon\"\"",
+          "version": "0",
+          "systemTime": "2026-10-14T11:16:51.6413800Z",
+          "eventRecordID": "15",
+          "threadID": "8668",
+          "computer": "DESKTOP-IBOCO3P",
+          "task": "106",
+          "processID": "1480",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-TaskScheduler"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "description": "Task Scheduler: .",
+      "groups": [
+        "windows",
+        " WEF"
+      ],
+      "mitre": {
+        "technique": [
+          "Scheduled Task"
+        ],
+        "id": [
+          "T1053.005"
+        ],
+        "tactic": [
+          "Execution",
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "67014"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1791976623.12626583",
+    "timestamp": "2026-10-14T11:17:03.107+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-14T11:17:03.107Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@WIN11-LAB@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.system.eventID": [
+      "@opensearch-dashboards-highlighted-field@106@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1791976623107
+  ]
+}

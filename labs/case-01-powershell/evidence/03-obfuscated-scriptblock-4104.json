@@ -1,0 +1,77 @@
+{
+  "_index": "wazuh-archives-4.x-2026.10.12",
+  "_id": "FbEfMKEBP5UPG5zcbBqj",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "WIN11-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-srv"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "messageNumber": "1",
+          "messageTotal": "1",
+          "scriptBlockText": "&amp; (gcm ('ie{0}' -f 'x')) (\\\"Wr\\\"+\\\"it\\\"+\\\"e-H\\\"+\\\"ost 'H\\\"+\\\"el\\\"+\\\"lo, fr\\\"+\\\"om P\\\"+\\\"ow\\\"+\\\"erS\\\"+\\\"h\\\"+\\\"ell!'\\\")",
+          "scriptBlockId": "214cdd80-3670-43fa-a357-f33479f47634"
+        },
+        "system": {
+          "eventID": "4104",
+          "keywords": "0x0",
+          "providerGuid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}",
+          "level": "5",
+          "channel": "Microsoft-Windows-PowerShell/Operational",
+          "opcode": "15",
+          "message": "\"Creating Scriptblock text (1 of 1):\r\n& (gcm ('ie{0}' -f 'x')) (\"Wr\"+\"it\"+\"e-H\"+\"ost 'H\"+\"el\"+\"lo, fr\"+\"om P\"+\"ow\"+\"erS\"+\"h\"+\"ell!'\")\r\n\r\nScriptBlock ID: 214cdd80-3670-43fa-a357-f33479f47634\r\nPath: \"",
+          "version": "1",
+          "systemTime": "2026-10-12T12:38:39.2770857Z",
+          "eventRecordID": "908",
+          "threadID": "4968",
+          "computer": "DESKTOP-IBOCO3P",
+          "task": "2",
+          "processID": "10128",
+          "severityValue": "VERBOSE",
+          "providerName": "Microsoft-Windows-PowerShell"
+        }
+      }
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-PowerShell\",\"providerGuid\":\"{a0c1853b-5c40-4b15-8766-3cf1c58f985a}\",\"eventID\":\"4104\",\"version\":\"1\",\"level\":\"5\",\"task\":\"2\",\"opcode\":\"15\",\"keywords\":\"0x0\",\"systemTime\":\"2026-10-12T12:38:39.2770857Z\",\"eventRecordID\":\"908\",\"processID\":\"10128\",\"threadID\":\"4968\",\"channel\":\"Microsoft-Windows-PowerShell/Operational\",\"computer\":\"DESKTOP-IBOCO3P\",\"severityValue\":\"VERBOSE\",\"message\":\"\\\"Creating Scriptblock text (1 of 1):\\r\\n& (gcm ('ie{0}' -f 'x')) (\\\"Wr\\\"+\\\"it\\\"+\\\"e-H\\\"+\\\"ost 'H\\\"+\\\"el\\\"+\\\"lo, fr\\\"+\\\"om P\\\"+\\\"ow\\\"+\\\"erS\\\"+\\\"h\\\"+\\\"ell!'\\\")\\r\\n\\r\\nScriptBlock ID: 214cdd80-3670-43fa-a357-f33479f47634\\r\\nPath: \\\"\"},\"eventdata\":{\"messageNumber\":\"1\",\"messageTotal\":\"1\",\"scriptBlockText\":\"&amp; (gcm ('ie{0}' -f 'x')) (\\\\\\\"Wr\\\\\\\"+\\\\\\\"it\\\\\\\"+\\\\\\\"e-H\\\\\\\"+\\\\\\\"ost 'H\\\\\\\"+\\\\\\\"el\\\\\\\"+\\\\\\\"lo, fr\\\\\\\"+\\\\\\\"om P\\\\\\\"+\\\\\\\"ow\\\\\\\"+\\\\\\\"erS\\\\\\\"+\\\\\\\"h\\\\\\\"+\\\\\\\"ell!'\\\\\\\")\",\"scriptBlockId\":\"214cdd80-3670-43fa-a357-f33479f47634\"}}}",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-10-12T12:38:40.637Z",
+    "location": "EventChannel",
+    "id": "1791808720.4854071",
+    "timestamp": "2026-10-12T12:38:40.637+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-12T12:38:40.637Z"
+    ],
+    "@timestamp": [
+      "2026-10-12T12:38:40.637Z"
+    ]
+  },
+  "highlight": {
+    "manager.name": [
+      "@opensearch-dashboards-highlighted-field@wazuh-srv@/opensearch-dashboards-highlighted-field@"
+    ],
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@WIN11-LAB@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.system.eventID": [
+      "@opensearch-dashboards-highlighted-field@4104@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1791808720637
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.14",
+  "_id": "KwhlOaEBDawt5BznjYNL",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "WIN11-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-srv"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "messageNumber": "1",
+          "messageTotal": "1",
+          "scriptBlockText": "&amp; (gcm ('ie{0}' -f 'x')) (\\\"Wr\\\"+\\\"it\\\"+\\\"e-H\\\"+\\\"ost 'H\\\"+\\\"el\\\"+\\\"lo, fr\\\"+\\\"om P\\\"+\\\"ow\\\"+\\\"erS\\\"+\\\"h\\\"+\\\"ell!'\\\")",
+          "scriptBlockId": "0b51118f-7045-4a8c-88ca-13e577906779"
+        },
+        "system": {
+          "eventID": "4104",
+          "keywords": "0x0",
+          "providerGuid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}",
+          "level": "5",
+          "channel": "Microsoft-Windows-PowerShell/Operational",
+          "opcode": "15",
+          "message": "\"Creating Scriptblock text (1 of 1):\r\n& (gcm ('ie{0}' -f 'x')) (\"Wr\"+\"it\"+\"e-H\"+\"ost 'H\"+\"el\"+\"lo, fr\"+\"om P\"+\"ow\"+\"erS\"+\"h\"+\"ell!'\")\r\n\r\nScriptBlock ID: 0b51118f-7045-4a8c-88ca-13e577906779\r\nPath: \"",
+          "version": "1",
+          "systemTime": "2026-10-14T07:51:13.6908108Z",
+          "eventRecordID": "1571",
+          "threadID": "9632",
+          "computer": "DESKTOP-IBOCO3P",
+          "task": "2",
+          "processID": "6140",
+          "severityValue": "VERBOSE",
+          "providerName": "Microsoft-Windows-PowerShell"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 8,
+      "description": "Suspicious PowerShell command execution or obfuscation",
+      "groups": [
+        "windows",
+        "powershell",
+        "custom_detection"
+      ],
+      "mitre": {
+        "technique": [
+          "PowerShell"
+        ],
+        "id": [
+          "T1059.001"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "100110"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-PowerShell\",\"providerGuid\":\"{a0c1853b-5c40-4b15-8766-3cf1c58f985a}\",\"eventID\":\"4104\",\"version\":\"1\",\"level\":\"5\",\"task\":\"2\",\"opcode\":\"15\",\"keywords\":\"0x0\",\"systemTime\":\"2026-10-14T07:51:13.6908108Z\",\"eventRecordID\":\"1571\",\"processID\":\"6140\",\"threadID\":\"9632\",\"channel\":\"Microsoft-Windows-PowerShell/Operational\",\"computer\":\"DESKTOP-IBOCO3P\",\"severityValue\":\"VERBOSE\",\"message\":\"\\\"Creating Scriptblock text (1 of 1):\\r\\n& (gcm ('ie{0}' -f 'x')) (\\\"Wr\\\"+\\\"it\\\"+\\\"e-H\\\"+\\\"ost 'H\\\"+\\\"el\\\"+\\\"lo, fr\\\"+\\\"om P\\\"+\\\"ow\\\"+\\\"erS\\\"+\\\"h\\\"+\\\"ell!'\\\")\\r\\n\\r\\nScriptBlock ID: 0b51118f-7045-4a8c-88ca-13e577906779\\r\\nPath: \\\"\"},\"eventdata\":{\"messageNumber\":\"1\",\"messageTotal\":\"1\",\"scriptBlockText\":\"&amp; (gcm ('ie{0}' -f 'x')) (\\\\\\\"Wr\\\\\\\"+\\\\\\\"it\\\\\\\"+\\\\\\\"e-H\\\\\\\"+\\\\\\\"ost 'H\\\\\\\"+\\\\\\\"el\\\\\\\"+\\\\\\\"lo, fr\\\\\\\"+\\\\\\\"om P\\\\\\\"+\\\\\\\"ow\\\\\\\"+\\\\\\\"erS\\\\\\\"+\\\\\\\"h\\\\\\\"+\\\\\\\"ell!'\\\\\\\")\",\"scriptBlockId\":\"0b51118f-7045-4a8c-88ca-13e577906779\"}}}",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-10-14T07:51:56.647Z",
+    "location": "EventChannel",
+    "id": "1791964316.9822154",
+    "timestamp": "2026-10-14T07:51:56.647+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-14T07:51:56.647Z"
+    ],
+    "@timestamp": [
+      "2026-10-14T07:51:56.647Z"
+    ]
+  }
+}

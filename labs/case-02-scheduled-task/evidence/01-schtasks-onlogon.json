@@ -1,0 +1,113 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.14",
+  "_id": "NwghOqEBDawt5Bznbqkt",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "WIN11-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-srv"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "schtasks.exe",
+          "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{ee16e3a0-64a3-6acf-1805-000000001100}",
+          "description": "Task Scheduler Configuration Tool",
+          "logonGuid": "{ee16e3a0-3017-6acf-e6c8-100000000000}",
+          "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+          "processGuid": "{ee16e3a0-64a3-6acf-1a05-000000001100}",
+          "logonId": "0x10c8e6",
+          "parentProcessId": "5984",
+          "processId": "7380",
+          "currentDirectory": "C:\\\\Users\\\\soc\\\\AppData\\\\Local\\\\Temp\\\\",
+          "utcTime": "2026-10-14 11:16:51.598",
+          "hashes": "MD5=0EB0E5987DADDBBCFAB61F46FC44ABE0,SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "company": "Microsoft Corporation",
+          "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+          "user": "DESKTOP-IBOCO3P\\\\soc",
+          "terminalSessionId": "1",
+          "parentUser": "DESKTOP-IBOCO3P\\\\soc"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-10-14 11:16:51.598\r\nProcessGuid: {ee16e3a0-64a3-6acf-1a05-000000001100}\r\nProcessId: 7380\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\soc\\AppData\\Local\\Temp\\\r\nUser: DESKTOP-IBOCO3P\\soc\r\nLogonGuid: {ee16e3a0-3017-6acf-e6c8-100000000000}\r\nLogonId: 0x10C8E6\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=0EB0E5987DADDBBCFAB61F46FC44ABE0,SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {ee16e3a0-64a3-6acf-1805-000000001100}\r\nParentProcessId: 5984\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: DESKTOP-IBOCO3P\\soc\"",
+          "version": "5",
+          "systemTime": "2026-10-14T11:16:51.5995902Z",
+          "eventRecordID": "20600",
+          "threadID": "4284",
+          "computer": "DESKTOP-IBOCO3P",
+          "task": "1",
+          "processID": "3632",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 6,
+      "mail": false,
+      "level": 3,
+      "description": "Suspicious Windows cmd shell execution",
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ],
+      "mitre": {
+        "technique": [
+          "Account Discovery",
+          "Windows Command Shell"
+        ],
+        "id": [
+          "T1087",
+          "T1059.003"
+        ],
+        "tactic": [
+          "Discovery",
+          "Execution"
+        ]
+      },
+      "id": "92032"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1791976623.12613957",
+    "timestamp": "2026-10-14T11:17:03.031+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-14T11:17:03.031Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@WIN11-LAB@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.system.eventID": [
+      "@opensearch-dashboards-highlighted-field@1@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1791976623031
+  ]
+}

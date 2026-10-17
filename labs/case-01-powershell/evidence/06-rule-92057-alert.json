@@ -1,0 +1,110 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.12",
+  "_id": "_rEfMKEBP5UPG5zcUhkO",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "WIN11-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-srv"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "Cmd.Exe",
+          "image": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{ee16e3a0-bedb-6acc-a501-000000000d00}",
+          "description": "Windows Command Processor",
+          "logonGuid": "{ee16e3a0-bd38-6acc-5515-0a0000000000}",
+          "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\"",
+          "processGuid": "{ee16e3a0-d4cc-6acc-9a02-000000000d00}",
+          "logonId": "0xa1555",
+          "parentProcessId": "3084",
+          "processId": "6516",
+          "currentDirectory": "C:\\\\Users\\\\soc\\\\AppData\\\\Local\\\\Temp\\\\",
+          "utcTime": "2026-10-12 12:38:36.896",
+          "hashes": "MD5=CE396564392FAFAAD5C07A5E2DADE4E6,SHA256=97AC98B1A92C286054CCE55239CFCCDFC23A5517BD07FE693072C9CA96C7DABB",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "company": "Microsoft Corporation",
+          "commandLine": "\\\"cmd.exe\\\" /c powershell.exe -e  JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASAAiACsAIgBvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.26100.9278 (WinBuild.160101.0800)",
+          "user": "DESKTOP-IBOCO3P\\\\soc",
+          "terminalSessionId": "1",
+          "parentUser": "DESKTOP-IBOCO3P\\\\soc"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-10-12 12:38:36.896\r\nProcessGuid: {ee16e3a0-d4cc-6acc-9a02-000000000d00}\r\nProcessId: 6516\r\nImage: C:\\Windows\\System32\\cmd.exe\r\nFileVersion: 10.0.26100.9278 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: \"cmd.exe\" /c powershell.exe -e  JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASAAiACsAIgBvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==\r\nCurrentDirectory: C:\\Users\\soc\\AppData\\Local\\Temp\\\r\nUser: DESKTOP-IBOCO3P\\soc\r\nLogonGuid: {ee16e3a0-bd38-6acc-5515-0a0000000000}\r\nLogonId: 0xA1555\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=CE396564392FAFAAD5C07A5E2DADE4E6,SHA256=97AC98B1A92C286054CCE55239CFCCDFC23A5517BD07FE693072C9CA96C7DABB\r\nParentProcessGuid: {ee16e3a0-bedb-6acc-a501-000000000d00}\r\nParentProcessId: 3084\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \r\nParentUser: DESKTOP-IBOCO3P\\soc\"",
+          "version": "5",
+          "systemTime": "2026-10-12T12:38:36.9004707Z",
+          "eventRecordID": "12015",
+          "threadID": "4320",
+          "computer": "DESKTOP-IBOCO3P",
+          "task": "1",
+          "processID": "3620",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 3,
+      "mail": true,
+      "level": 12,
+      "description": "Powershell.exe spawned a powershell process which executed a base64 encoded command",
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ],
+      "mitre": {
+        "technique": [
+          "PowerShell"
+        ],
+        "id": [
+          "T1059.001"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "92057"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1791808718.4839904",
+    "timestamp": "2026-10-12T12:38:38.442+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-10-12T12:38:38.442Z"
+    ]
+  },
+  "highlight": {
+    "rule.id": [
+      "@opensearch-dashboards-highlighted-field@92057@/opensearch-dashboards-highlighted-field@"
+    ],
+    "data.win.eventdata.processId": [
+      "@opensearch-dashboards-highlighted-field@6516@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1791808718442
+  ]
+}

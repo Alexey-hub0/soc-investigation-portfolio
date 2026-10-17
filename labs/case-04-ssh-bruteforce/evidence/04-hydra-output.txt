@@ -1,0 +1,19 @@
+Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-10-16 08:19:06
+[DATA] max 1 task per 1 server, overall 1 task, 12 login tries (l:1/p:12), ~12 tries per task
+[DATA] attacking ssh://192.168.1.20:22/
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_01" - 1 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_02" - 2 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_03" - 3 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_04" - 4 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_05" - 5 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_06" - 6 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_07" - 7 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_08" - 8 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_09" - 9 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_10" - 10 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_11" - 11 of 12 [child 0] (0/0)
+[ATTEMPT] target 192.168.1.20 - login "lab04_ssh" - pass "LAB04_incorrect_12" - 12 of 12 [child 0] (0/0)
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-10-16 08:20:04

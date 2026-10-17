@@ -1,0 +1,29 @@
+2026-10-16T12:19:07+00:00 wazuh-srv sshd[4792]: Received disconnect from 192.168.1.11 port 49805:11: Bye Bye [preauth]
+2026-10-16T12:19:07+00:00 wazuh-srv sshd[4792]: Disconnected from authenticating user lab04_ssh 192.168.1.11 port 49805 [preauth]
+2026-10-16T12:19:07+00:00 wazuh-srv sshd[4794]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
+2026-10-16T12:19:10+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:14+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:19+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:22+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:26+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:29+00:00 wazuh-srv sshd[4794]: Failed password for lab04_ssh from 192.168.1.11 port 49806 ssh2
+2026-10-16T12:19:31+00:00 wazuh-srv sshd[4794]: error: maximum authentication attempts exceeded for lab04_ssh from 192.168.1.11 port 49806 ssh2 [preauth]
+2026-10-16T12:19:31+00:00 wazuh-srv sshd[4794]: Disconnecting authenticating user lab04_ssh 192.168.1.11 port 49806: Too many authentication failures [preauth]
+2026-10-16T12:19:31+00:00 wazuh-srv sshd[4794]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
+2026-10-16T12:19:31+00:00 wazuh-srv sshd[4794]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-16T12:19:32+00:00 wazuh-srv sshd[4797]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
+2026-10-16T12:19:34+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:38+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:43+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:47+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:51+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:55+00:00 wazuh-srv sshd[4797]: Failed password for lab04_ssh from 192.168.1.11 port 49807 ssh2
+2026-10-16T12:19:56+00:00 wazuh-srv sshd[4797]: error: maximum authentication attempts exceeded for lab04_ssh from 192.168.1.11 port 49807 ssh2 [preauth]
+2026-10-16T12:19:56+00:00 wazuh-srv sshd[4797]: Disconnecting authenticating user lab04_ssh 192.168.1.11 port 49807: Too many authentication failures [preauth]
+2026-10-16T12:19:56+00:00 wazuh-srv sshd[4797]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
+2026-10-16T12:19:56+00:00 wazuh-srv sshd[4797]: PAM service(sshd) ignoring max retries; 6 > 3
+2026-10-16T12:19:57+00:00 wazuh-srv sshd[4800]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
+2026-10-16T12:19:59+00:00 wazuh-srv sshd[4800]: Failed password for lab04_ssh from 192.168.1.11 port 49809 ssh2
+2026-10-16T12:20:03+00:00 wazuh-srv sshd[4800]: Failed password for lab04_ssh from 192.168.1.11 port 49809 ssh2
+2026-10-16T12:20:04+00:00 wazuh-srv sshd[4800]: Connection closed by authenticating user lab04_ssh 192.168.1.11 port 49809 [preauth]
+2026-10-16T12:20:04+00:00 wazuh-srv sshd[4800]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.11  user=lab04_ssh
